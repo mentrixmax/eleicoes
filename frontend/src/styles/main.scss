@@ -1,0 +1,42 @@
+$theme-colors: (
+  "primary": #41cf41,
+  "secondary": #0A5517,
+  "gray": #888888
+);
+
+@import url('./_fonts.scss');
+@import url('./_colors.scss');
+
+@import url('./_header.scss');
+@import url('./_links.scss');
+@import url('./_footer.scss');
+@import url('./_plan.scss');
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+
+//General Reset
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+
+body.modal-open {
+  overflow-y: hidden;
+}
+
+.is-required::after {
+  content: '*';
+  color: red;
+  margin-left: 4px;
+  font-weight: bold;
+}

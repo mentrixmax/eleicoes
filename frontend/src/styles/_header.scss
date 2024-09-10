@@ -1,0 +1,105 @@
+$ideal_height: clamp(1px, 60vw, 375px);
+$ideal_name_size: clamp(40px,10vw,132px);
+$ideal_director_size: clamp(20px,2vw,50px);
+$ideal_spacing_size: clamp(8px,3vw,26px);
+
+.header {
+  background: radial-gradient(130.74% 130.74% at 50% 50%, #41cf41dd 0%, #0a5517 80%), url('../assets/img/ifcebg.jpg');
+  width: 100%;
+  height: $ideal_height;
+  background-position: center; 
+  background-repeat: repeat-x;
+  background-size: auto;
+  display: flex;
+  justify-content: center;
+  border-bottom: 5px solid var(--red-line);
+  overflow: hidden;
+}
+
+.header-image {
+  background: url('../assets/img/diretor-teste.png');
+  width: 100%;
+  height: 100%;
+  transform: translate(22%,0%);
+  background-position: top; 
+  background-repeat: no-repeat;
+  background-size: clamp(1px,90vw,512px);
+  overflow: hidden;
+}
+
+.header-info {
+  height: $ideal_height;
+  width: 100%;
+  position: absolute;
+  transform: translate(-12%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-director {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: $ideal_director_size;
+  letter-spacing: $ideal_spacing_size;
+  color: white;
+  text-align: center;
+}
+
+.header-name {
+  font-family: 'Julietta-Messie', sans-serif;
+  font-weight: 500;
+  font-size: $ideal_name_size;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px){
+  .header-info {
+    transform: translateX(-15%);
+  }
+  .header-director{
+    font-weight: 300;
+    font-size: 26px;
+    letter-spacing: 14px;
+  }
+  .header-image {
+    background: url('../assets/img/diretor-teste.png');
+    width: 100%;
+    height: 100%;
+    transform: translate(24%,5%);
+    background-position: bottom; 
+    background-repeat: no-repeat;
+    background-size: clamp(1px,90vw,256px);
+    overflow: hidden;
+  }
+  .header-name {
+    font-size: 98px;
+  }
+}
+
+@media (max-width: 425px){
+  .header-info {
+    transform: translateX(-12%);
+  }
+  .header-director{
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 10px;
+  }
+  .header-image {
+    background: url('../assets/img/diretor-teste.png');
+    width: 100%;
+    height: 100%;
+    transform: translate(30%,18%);
+    background-position: bottom; 
+    background-repeat: no-repeat;
+    background-size: clamp(1px,90vw,180px);
+    overflow: hidden;
+  }
+  .header-name {
+    font-size: 3rem;
+  }
+}
+
